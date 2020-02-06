@@ -1,0 +1,91 @@
+
+
+h2{
+    text-align: center;
+    bacground-color:yellow;
+    color:#111;
+}
+
+th, td {
+    padding:8px 8px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+h {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+
+.th {
+    background: #888;
+    color: #fff;
+}
+.text-center{
+    text-align: center;
+}
+.calc-text {
+    font-size:18px;
+}
+
+.calc-box {
+    width:100%;
+    text-align: center;
+}
+
+@media (max-width: 670px) {
+    .calc-text {
+        font-size:12px;
+    }
+}
+@media (max-width: 990px) {
+    .plan-li{
+        display:none;
+    }
+}
+
+
+.calc {
+    text-align: center;
+    height:20%;
+    width:100%;
+    border-bottom:1px solid #888;
+}
+
+.price-btn{
+    margin-top:3px;
+
+}
+
+.price-caution{
+    color:red;
+}
+
+.chosen-plan{
+    color: black;
+}
+
+.calc h2{
+    color: #888;
+}
+
+/* 
+・自分でデザインするとダサくなるのであえてBootstrapテンプレートそのまま使っている
+・プランと人数で合計金額が計算できるように料金シミュレーションをjQueryで作りたかった
+やったこと
+Bootstrapで横幅の調整
+cssで見た目をサイトの雰囲気に合わせた
+OUR PRICESに料金プランの内容を入力
+ボタンを料金シミュレーションに変更し、押すと料金シミュレーションのところに飛ぶように変更
+料金プランのボックスの高さが合わなくなるのでハイフンを入れて高さを合わせた
+スマホサイズにした時には高さを合わせる必要がないのでスマホサイズになったらが消えるようにした
+料金プランボックスのボタンを押すとプランに合わせた金額がシミュレーターに表示されるようにした（clickメソッドとtextメソッド）
+ボタンを押した時に一人当たりの金額は変わるけど合計金額が変わらない→→人数を０にリセットするように変更（clickメソッドとvalメソッド）
+ビーチパーティープランは人数で金額が変わるので、人数に合わせて一人当たりの金額を変更するように条件分岐を追加
+人数が変わったらビーチパーティープランじゃなくても金額が変わってしまうようになったのでプランを表示させて、条件分岐の条件に選択中のプラン名がビーパプランの時だけ動くように変更
+男性・女性どちらか片方の人数だけ変更してプランが変わった時に、変更してない方の合計金額が再計算されない・・・
+*/
